@@ -88,7 +88,7 @@
     var played = D.n_played;
     var locks = D.teams.filter(function (t) { return t.probs.top8 >= 0.9; }).sort(function (a, b) { return b.probs.top8 - a.probs.top8; });
 
-    document.getElementById("livePill").textContent = "Updated after matchday " + D.through_md + " · " +
+    document.getElementById("livePill").textContent = "Live from " + ((D.source && D.source.source) || "results") + " · after matchday " + D.through_md + " · " +
       new Date(D.updated + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
 
     var h = "";
@@ -250,7 +250,9 @@
 
   function renderTable() {
     var rows = D.teams.slice().sort(function (a, b) { return a.table_pos - b.table_pos; });
-    var h = '<div class="card-h"><div><h2>League phase table</h2><p>Real standings after matchday ' + D.through_md + " · projected points and odds from the model</p></div></div>";
+    var src = D.source || {}, when = src.fetched_at ? new Date(src.fetched_at.replace("Z", ":00Z")).toLocaleString("en-US", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }) : null;
+    var srcTxt = src.url ? 'Results from <a href="' + esc(src.url) + '" target="_blank" rel="noopener">' + esc(src.source) + "</a>" + (when ? ", fetched " + when : "") : "Results entered by hand";
+    var h = '<div class="card-h"><div><h2>League phase table</h2><p>Real standings after matchday ' + D.through_md + " · " + srcTxt + " · projected points and odds from the model</p></div></div>";
     h += '<div class="tbl-wrap"><table><thead><tr><th>#</th><th class="tm">Club</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th><th>Proj</th><th>Top 8</th><th>Win</th></tr></thead><tbody>';
     h += rows.map(function (t) {
       var gd = t.gf - t.ga, zc = t.table_pos <= 8 ? "var(--zone-a)" : t.table_pos <= 24 ? "var(--zone-b)" : "var(--zone-c)";

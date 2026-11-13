@@ -74,5 +74,21 @@ class MatchModelTests(unittest.TestCase):
         self.assertAlmostEqual(sum(sim.start_ratings.values()), sum(before.values()))
 
 
+class ResultsFeedTests(unittest.TestCase):
+    def test_espn_names_map_to_our_teams(self):
+        from update_results import Names
+        names = Names([t.name for t in TEAMS])
+        for espn, ours in [("Internazionale", "Inter Milan"), ("Feyenoord Rotterdam", "Feyenoord"), ("Bodo/Glimt", "Bodo/Glimt"),
+                           ("Atlético Madrid", "Atletico Madrid"), ("Fenerbahçe", "Fenerbahce"), ("Paris Saint-Germain", "Paris Saint-Germain")]:
+            self.assertEqual(names(espn), ours, espn)
+        self.assertIsNone(names("Chelsea"))
+
+    def test_saved_results_match_fixtures(self):
+        import csv
+        fixtures = {(r["home"], r["away"]) for r in csv.DictReader(open(ROOT / "data" / "fixtures.csv"))}
+        for r in csv.DictReader(open(ROOT / "data" / "results.csv")):
+            self.assertIn((r["home"], r["away"]), fixtures)
+
+
 if __name__ == "__main__":
     unittest.main()
