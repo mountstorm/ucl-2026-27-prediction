@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UCL 2026-27 Odds</title>
+  <meta name="description" content="Champions League 2026-27 title odds from 50,000 simulated seasons, updated with every real result.">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%2300D632'/%3E%3Cpath d='M8 21l5-5 4 3 7-8' stroke='%23000' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="css/app.css">
+  <script>
+    try { var t = localStorage.getItem('ucl.theme'); if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="bar">
+    <div class="wrap bar-in">
+      <a class="logo" href="./" aria-label="UCL 2026-27 Odds home">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="30" height="30"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 21l5-5 4 3 7-8" stroke="var(--on-accent)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </span>
+        <span class="logo-text">UCL 26/27<br>Odds</span>
+      </a>
+      <span class="live-pill" id="livePill"></span>
+      <div class="bar-actions">
+        <button class="round-btn" id="themeBtn" type="button" aria-label="Switch light or dark theme">
+          <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>
+        </button>
+        <a class="pill-btn" href="https://github.com/mountstorm/ucl-2026-27-prediction">Source</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap" id="app" aria-live="polite"></main>
+
+  <footer class="wrap foot">
+    <p>Probabilities from a simulation model, not betting advice. "Yes" and "No" prices are the model's chances written as cents on the dollar. Club colors are used for identification only; no crests or trademarks.</p>
+    <p><a href="https://github.com/mountstorm/ucl-2026-27-prediction">Source on GitHub</a></p>
+  </footer>
+
+  <div class="tip" id="tip" role="tooltip" hidden></div>
+
+  <script src="data.js"></script>
+  <script src="js/teams.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
