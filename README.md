@@ -5,22 +5,22 @@
 A Monte Carlo model of the 2026-27 Champions League. It locks in every real result so far, then plays out the rest of the season 50,000 times: the league phase, the play-offs, the bracket, and the final in Madrid on 5 June 2027. Plain Python 3.9+, no dependencies.
 
 <!-- prediction:start -->
-## Current prediction (after matchday 4, 72 of 144 league games played)
+## Current prediction (after matchday 5, 81 of 144 league games played)
 
 | # | Club | Pts | Rating (pre → now) | Top 8 | Last 16 | QF | SF | Final | **Win** |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | **Paris Saint-Germain** | 12 | 2005 → 2047 | 97.9% | 99.6% | 82.1% | 59.1% | 38.4% | **22.5%** |
-| 2 | Arsenal | 10 | 1990 → 2009 | 88.3% | 97.9% | 75.0% | 47.9% | 28.3% | **15.5%** |
-| 3 | Real Madrid | 12 | 1950 → 1978 | 96.4% | 99.0% | 73.4% | 44.2% | 23.4% | **11.9%** |
-| 4 | Bayern Munich | 8 | 1975 → 1989 | 73.4% | 94.5% | 67.9% | 40.1% | 22.3% | **11.7%** |
-| 5 | Barcelona | 9 | 1960 → 1977 | 75.3% | 94.6% | 66.8% | 38.7% | 20.6% | **10.6%** |
-| 6 | Manchester City | 9 | 1945 → 1954 | 62.8% | 90.8% | 59.5% | 31.4% | 15.4% | **7.4%** |
-| 7 | Liverpool | 9 | 1935 → 1941 | 67.2% | 91.0% | 58.3% | 29.7% | 14.3% | **6.6%** |
-| 8 | Inter Milan | 6 | 1895 → 1891 | 19.5% | 70.4% | 32.9% | 14.4% | 6.1% | **2.7%** |
-| 9 | Atlético Madrid | 4 | 1880 → 1869 | 7.3% | 58.5% | 23.9% | 10.2% | 4.2% | **1.9%** |
-| 10 | Aston Villa | 9 | 1835 → 1852 | 44.2% | 77.9% | 35.9% | 13.4% | 4.8% | **1.8%** |
+| 1 | **Paris Saint-Germain** | 12 | 2005 → 2047 | 98.0% | 99.7% | 81.8% | 59.1% | 38.7% | **23.2%** |
+| 2 | Arsenal | 11 | 1990 → 2004 | 80.0% | 96.4% | 71.9% | 44.1% | 25.4% | **13.6%** |
+| 3 | Real Madrid | 15 | 1950 → 1985 | 99.5% | 99.9% | 74.6% | 47.0% | 25.8% | **13.2%** |
+| 4 | Bayern Munich | 8 | 1975 → 1989 | 73.8% | 94.6% | 68.0% | 40.9% | 22.9% | **12.1%** |
+| 5 | Barcelona | 9 | 1960 → 1977 | 76.2% | 94.7% | 66.6% | 38.8% | 21.0% | **10.7%** |
+| 6 | Manchester City | 10 | 1945 → 1949 | 49.3% | 87.5% | 53.6% | 27.6% | 13.6% | **6.6%** |
+| 7 | Liverpool | 9 | 1935 → 1941 | 67.9% | 91.1% | 58.1% | 29.9% | 14.4% | **6.6%** |
+| 8 | Inter Milan | 6 | 1895 → 1891 | 20.8% | 70.0% | 33.3% | 15.0% | 6.6% | **2.8%** |
+| 9 | Atlético Madrid | 4 | 1880 → 1869 | 7.9% | 56.7% | 23.7% | 10.3% | 4.0% | **1.8%** |
+| 10 | Como | 12 | 1805 → 1849 | 48.7% | 79.9% | 36.9% | 13.5% | 4.8% | **1.7%** |
 
-Favourite: **Paris Saint-Germain** (22.5%, 16.6% before matchday 1). Most likely final: Arsenal v Paris Saint-Germain (7.4%). Results from ESPN, fetched 2026-11-13T02:48Z.
+Favourite: **Paris Saint-Germain** (23.2%, 16.6% before matchday 1). Most likely final: Paris Saint-Germain v Real Madrid (8.0%). Results from ESPN, fetched 2026-11-25T04:57Z.
 <!-- prediction:end -->
 
 ## Run it
